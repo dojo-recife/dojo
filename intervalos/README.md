@@ -2,7 +2,7 @@
 
 | :slightly_smiling_face: :sparkles:  | :frowning_face:    :sparkles:              |
 | ------------- |---------------------------------|
-| em suma, boa primeira tentativa  | ir mais devagar                 |
+| em suma, boa primeira tentativa  | respeitar mais o baby-steps                 |
 | comida boa | timing errado da entrega do lanche |
 | o equipamento funcionou | lembrar de trazer pratinhos     |
 | aprender TDD  | falta de quebra-gelo            |
