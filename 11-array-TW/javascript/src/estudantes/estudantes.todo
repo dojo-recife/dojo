@@ -1,0 +1,6 @@
+#Regras de Negocio para o caso
+
+Regras:
+Somar notas
+Se nota for 0, a soma deve retornar 0
+Caso o aluno tenha mais de 5 notas a soma deve ser multiplicada por dois
