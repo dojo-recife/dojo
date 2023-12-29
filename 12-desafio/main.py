@@ -1,4 +1,4 @@
-def numeros_na_linha(linha: str):
+def numeros_na_linha(text):
     digit_map = {
         "one": 1,
         "two": 2,
@@ -10,19 +10,34 @@ def numeros_na_linha(linha: str):
         "eight": 8,
         "nine": 9,
     }
+    numbers = digit_map.keys()
+    value = ''
+    find_numbers = []
     
-    str_number = {digit:linha.index(digit) for digit in digit_map if digit in linha}
-    print(str_number)
-    first_position_digit = ""
-    for digit in digit_map:
-        if digit in linha:
-            index = linha.index(digit)
-            # linha = linha.replace(digit, str(digit_map[digit]))
-            min_value = min(str_number.values())
-            max_value = max(str_number.values())
-            
-            linha = linha.replace(digit, str(digit_map[digit]))
-    
-    digits = [number for number in linha if number.isdigit()]
 
-    return f"{digits[0]}{digits[-1]}"
+    for c in text:
+        if c.isdigit():
+            find_numbers.append(int(c))
+            value = ''
+            continue
+
+        value += c
+        reverse = ''
+        for x in range(len(value), 0, -1):
+            reverse = value[x-1:]
+            if reverse in numbers:
+                find_numbers.append(reverse)
+                value = ''
+                break
+
+        if value in numbers:
+            find_numbers.append(value)
+    
+    find_numbers = [num.replace(num, str(digit_map[num])) 
+                    if not str(num).isdigit() else str(num) 
+                    for num in find_numbers]
+    
+    return str(find_numbers[0]) + str(find_numbers[-1])
+    
+    
+    

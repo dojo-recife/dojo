@@ -44,6 +44,14 @@ class TestCase(unittest.TestCase):
     def test_str_and_number_4(self):
         numero = numeros_na_linha("twone3furx")
         self.assertEqual(numero, "23")
+        
+    def test_treb7uchet(self):
+        num = numeros_na_linha("treb7uchet")
+        self.assertEqual(num, "77")
+        
+    
+        
+
        
 # twone3fourx
 # xtwone3fourx
